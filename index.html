@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpendWise Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- DASHBOARD LAYOUT (CSS Grid)                 -->
+    <!-- ========================================== -->
+    <div class="dashboard">
+
+        <!-- ====================================== -->
+        <!-- SIDEBAR                                -->
+        <!-- ====================================== -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="fas fa-wallet"></i>
+                <span>SpendWise</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fas fa-th-large"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Transactions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-tag"></i>
+                            <span>Categories</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- ====================================== -->
+        <!-- MAIN CONTENT                           -->
+        <!-- ====================================== -->
+        <main class="main-content">
+
+            <!-- ================================== -->
+            <!-- HEADER                             -->
+            <!-- ================================== -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Dashboard</h1>
+                </div>
+
+                <div class="header-right">
+                    <span class="date-display">
+                        <i class="far fa-calendar-alt"></i>
+                        January 2026
+                    </span>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=ABDI+ADEN&background=1a3c34&color=fff&size=40" alt="User avatar" />
+                        <div class="user-info">
+                            <span class="user-name">ABDI ADEN</span>
+                            <span class="user-role">Premium Member</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ================================== -->
+            <!-- SUMMARY STATS (Flexbox)            -->
+            <!-- ================================== -->
+            <section class="summary-stats">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #e8f5e9; color: #2e7d32;">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-label">Income</span>
+                        <span class="stat-value">$4,850.00</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #fce4ec; color: #c62828;">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-label">Expenses</span>
+                        <span class="stat-value">$2,345.50</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #e3f2fd; color: #0d47a1;">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-label">Balance</span>
+                        <span class="stat-value">$2,504.50</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #fff3e0; color: #e65100;">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-label">Transactions</span>
+                        <span class="stat-value">48</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================================== -->
+            <!-- CATEGORY CARDS (CSS Grid)          -->
+            <!-- ================================== -->
+            <section class="category-grid">
+                <h2>Spending Categories</h2>
+                <div class="cards-grid">
+
+                    <!-- Card 1: Food -->
+                    <div class="category-card" tabindex="0">
+                        <div class="card-icon" style="background: #dbeafe; color: #1e40af;">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Food</h3>
+                            <p class="card-amount">$680.00</p>
+                            <span class="card-percentage">28% of total</span>
+                        </div>
+                        <div class="card-progress">
+                            <div class="progress-bar" style="width: 28%; background: #1e40af;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Transport -->
+                    <div class="category-card" tabindex="0">
+                        <div class="card-icon" style="background: #fef3c7; color: #92400e;">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Transport</h3>
+                            <p class="card-amount">$320.50</p>
+                            <span class="card-percentage">13% of total</span>
+                        </div>
+                        <div class="card-progress">
+                            <div class="progress-bar" style="width: 13%; background: #92400e;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Rent -->
+                    <div class="category-card" tabindex="0">
+                        <div class="card-icon" style="background: #fce4ec; color: #b71c1c;">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Rent</h3>
+                            <p class="card-amount">$850.00</p>
+                            <span class="card-percentage">36% of total</span>
+                        </div>
+                        <div class="card-progress">
+                            <div class="progress-bar" style="width: 36%; background: #b71c1c;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Entertainment -->
+                    <div class="category-card" tabindex="0">
+                        <div class="card-icon" style="background: #f3e8ff; color: #6b21a5;">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Entertainment</h3>
+                            <p class="card-amount">$215.00</p>
+                            <span class="card-percentage">9% of total</span>
+                        </div>
+                        <div class="card-progress">
+                            <div class="progress-bar" style="width: 9%; background: #6b21a5;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Savings -->
+                    <div class="category-card" tabindex="0">
+                        <div class="card-icon" style="background: #e8f5e9; color: #1b5e20;">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Savings</h3>
+                            <p class="card-amount">$200.00</p>
+                            <span class="card-percentage">8% of total</span>
+                        </div>
+                        <div class="card-progress">
+                            <div class="progress-bar" style="width: 8%; background: #1b5e20;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Utilities -->
+                    <div class="category-card" tabindex="0">
+                        <div class="card-icon" style="background: #e0f7fa; color: #00695c;">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Utilities</h3>
+                            <p class="card-amount">$80.00</p>
+                            <span class="card-percentage">3% of total</span>
+                        </div>
+                        <div class="card-progress">
+                            <div class="progress-bar" style="width: 3%; background: #00695c;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
