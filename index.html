@@ -3,287 +3,158 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SpendWise - Budget Dashboard</title>
+    <title>Budget Tracker Dashboard</title>
 
-    <!-- Google Font: Inter -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
 
-    <!-- Font Awesome 6 (Free Icons) -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- ============================================ -->
-    <!-- DASHBOARD LAYOUT - CSS GRID                  -->
-    <!-- ============================================ -->
+    <!-- ========================================== -->
+    <!-- DASHBOARD LAYOUT (CSS Grid)                 -->
+    <!-- ========================================== -->
     <div class="dashboard">
 
-        <!-- ======================================== -->
-        <!-- SIDEBAR - Flexbox Column                 -->
-        <!-- ======================================== -->
+        <!-- ====================================== -->
+        <!-- SIDEBAR                                -->
+        <!-- ====================================== -->
         <aside class="sidebar">
-            <!-- Brand -->
             <div class="sidebar-brand">
-                <i class="fas fa-coins"></i>
+                <i class="fas fa-wallet"></i>
                 <span>SpendWise</span>
             </div>
 
-            <!-- Navigation -->
             <nav class="sidebar-nav">
                 <ul>
-                    <li class="active">
-                        <a href="#">
-                            <i class="fas fa-th-large"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Analytics</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-receipt"></i>
-                            <span>Transactions</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-tags"></i>
-                            <span>Categories</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-bell"></i>
-                            <span>Alerts</span>
-                            <span class="badge">3</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-cog"></i>
-                            <span>Settings</span>
-                        </a>
-                    </li>
+                    <li class="active"><a href="#"><i class="fas fa-th-large"></i><span>Dashboard</span></a></li>
+                    <li><a href="#"><i class="fas fa-receipt"></i><span>Expenses</span></a></li>
+                    <li><a href="#"><i class="fas fa-chart-pie"></i><span>Analytics</span></a></li>
+                    <li><a href="#"><i class="fas fa-tags"></i><span>Categories</span></a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i><span>Settings</span></a></li>
                 </ul>
             </nav>
 
-            <!-- Footer -->
             <div class="sidebar-footer">
-                <a href="#">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Logout</span>
-                </a>
+                <a href="#"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
             </div>
         </aside>
 
-        <!-- ======================================== -->
-        <!-- MAIN CONTENT                            -->
-        <!-- ======================================== -->
+        <!-- ====================================== -->
+        <!-- MAIN CONTENT (Budget Tracker)          -->
+        <!-- ====================================== -->
         <main class="main-content">
 
-            <!-- ==================================== -->
-            <!-- HEADER - Flexbox Row                 -->
-            <!-- ==================================== -->
+            <!-- ================================== -->
+            <!-- HEADER                             -->
+            <!-- ================================== -->
             <header class="dashboard-header">
                 <div class="header-left">
-                    <button class="menu-toggle" aria-label="Toggle navigation">
+                    <button class="menu-toggle" aria-label="Toggle menu">
                         <i class="fas fa-bars"></i>
                     </button>
-                    <h1>Dashboard</h1>
+                    <h1>My Budget Tracker</h1>
                 </div>
-
                 <div class="header-right">
-                    <span class="date-display">
-                        <i class="far fa-calendar-alt"></i>
-                        January 2026
-                    </span>
+                    <span class="date-display"><i class="far fa-calendar-alt"></i> January 2026</span>
                     <div class="user-profile">
-                        <img src="https://ui-avatars.com/api/?name=Aisha+Mohamed&background=1a3c34&color=fff&size=40" alt="Aisha Mohamed" />
+                        <img src="https://ui-avatars.com/api/?name=Ali+Hassan&background=1a3c34&color=fff&size=40" alt="Ali Hassan" />
                         <div class="user-info">
-                            <span class="user-name">Aisha Mohamed</span>
+                            <span class="user-name">Ali Hassan</span>
                             <span class="user-role">Premium Member</span>
                         </div>
                     </div>
                 </div>
             </header>
 
-            <!-- ==================================== -->
-            <!-- SUMMARY STATS - Flexbox Row          -->
-            <!-- ==================================== -->
+            <!-- ================================== -->
+            <!-- SUMMARY STATS                      -->
+            <!-- ================================== -->
             <section class="summary-stats">
                 <div class="stat-card">
-                    <div class="stat-icon income">
-                        <i class="fas fa-arrow-down"></i>
-                    </div>
+                    <div class="stat-icon income"><i class="fas fa-arrow-down"></i></div>
                     <div class="stat-info">
                         <span class="stat-label">Income</span>
                         <span class="stat-value">$4,850</span>
                     </div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon expense">
-                        <i class="fas fa-arrow-up"></i>
-                    </div>
+                    <div class="stat-icon expense"><i class="fas fa-arrow-up"></i></div>
                     <div class="stat-info">
                         <span class="stat-label">Expenses</span>
                         <span class="stat-value">$2,345</span>
                     </div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon balance">
-                        <i class="fas fa-wallet"></i>
-                    </div>
+                    <div class="stat-icon balance"><i class="fas fa-wallet"></i></div>
                     <div class="stat-info">
                         <span class="stat-label">Balance</span>
                         <span class="stat-value">$2,505</span>
                     </div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon transactions">
-                        <i class="fas fa-exchange-alt"></i>
-                    </div>
-                    <div class="stat-info">
-                        <span class="stat-label">Transactions</span>
-                        <span class="stat-value">48</span>
-                    </div>
-                </div>
             </section>
 
-            <!-- ==================================== -->
-            <!-- CATEGORY CARDS - CSS Grid            -->
-            <!-- ==================================== -->
-            <section class="category-section">
-                <h2>Spending Categories</h2>
-
-                <div class="cards-grid">
-                    <!-- Card 1: Food -->
-                    <div class="category-card" tabindex="0">
-                        <div class="card-icon food">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Food</h3>
-                            <p class="card-amount">$680</p>
-                            <span class="card-percentage">28%</span>
-                        </div>
-                        <div class="card-progress">
-                            <div class="progress-bar" style="width: 28%;"></div>
-                        </div>
+            <!-- ================================== -->
+            <!-- ADD EXPENSE FORM (From Week 2)     -->
+            <!-- ================================== -->
+            <section class="add-expense-section">
+                <h2>Add Expense</h2>
+                <form id="expense-form">
+                    <div class="input-group">
+                        <label for="expense-name">Expense Name</label>
+                        <input type="text" id="expense-name" placeholder="e.g., Groceries" />
                     </div>
-
-                    <!-- Card 2: Transport -->
-                    <div class="category-card" tabindex="0">
-                        <div class="card-icon transport">
-                            <i class="fas fa-car"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Transport</h3>
-                            <p class="card-amount">$320</p>
-                            <span class="card-percentage">13%</span>
-                        </div>
-                        <div class="card-progress">
-                            <div class="progress-bar" style="width: 13%;"></div>
-                        </div>
+                    <div class="input-group">
+                        <label for="expense-amount">Amount</label>
+                        <input type="number" id="expense-amount" placeholder="e.g., 45.50" step="0.01" />
                     </div>
-
-                    <!-- Card 3: Rent -->
-                    <div class="category-card" tabindex="0">
-                        <div class="card-icon rent">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Rent</h3>
-                            <p class="card-amount">$850</p>
-                            <span class="card-percentage">36%</span>
-                        </div>
-                        <div class="card-progress">
-                            <div class="progress-bar" style="width: 36%;"></div>
-                        </div>
+                    <div class="input-group">
+                        <label for="expense-category">Category</label>
+                        <select id="expense-category">
+                            <option value="food">Food</option>
+                            <option value="transport">Transport</option>
+                            <option value="rent">Rent</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
-
-                    <!-- Card 4: Entertainment -->
-                    <div class="category-card" tabindex="0">
-                        <div class="card-icon entertainment">
-                            <i class="fas fa-film"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Entertainment</h3>
-                            <p class="card-amount">$215</p>
-                            <span class="card-percentage">9%</span>
-                        </div>
-                        <div class="card-progress">
-                            <div class="progress-bar" style="width: 9%;"></div>
-                        </div>
+                    <div class="input-group">
+                        <label for="expense-date">Date</label>
+                        <input type="date" id="expense-date" />
                     </div>
+                    <button type="button" class="btn btn-primary">Add Expense</button>
+                </form>
+            </section>
 
-                    <!-- Card 5: Savings -->
-                    <div class="category-card" tabindex="0">
-                        <div class="card-icon savings">
-                            <i class="fas fa-piggy-bank"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Savings</h3>
-                            <p class="card-amount">$200</p>
-                            <span class="card-percentage">8%</span>
-                        </div>
-                        <div class="card-progress">
-                            <div class="progress-bar" style="width: 8%;"></div>
-                        </div>
-                    </div>
-
-                    <!-- Card 6: Utilities -->
-                    <div class="category-card" tabindex="0">
-                        <div class="card-icon utilities">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Utilities</h3>
-                            <p class="card-amount">$80</p>
-                            <span class="card-percentage">3%</span>
-                        </div>
-                        <div class="card-progress">
-                            <div class="progress-bar" style="width: 3%;"></div>
-                        </div>
-                    </div>
-
-                    <!-- Card 7: Healthcare (Bonus) -->
-                    <div class="category-card" tabindex="0">
-                        <div class="card-icon healthcare">
-                            <i class="fas fa-heartbeat"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Healthcare</h3>
-                            <p class="card-amount">$95</p>
-                            <span class="card-percentage">4%</span>
-                        </div>
-                        <div class="card-progress">
-                            <div class="progress-bar" style="width: 4%;"></div>
-                        </div>
-                    </div>
-
-                    <!-- Card 8: Shopping (Bonus) -->
-                    <div class="category-card" tabindex="0">
-                        <div class="card-icon shopping">
-                            <i class="fas fa-shopping-bag"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Shopping</h3>
-                            <p class="card-amount">$150</p>
-                            <span class="card-percentage">6%</span>
-                        </div>
-                        <div class="card-progress">
-                            <div class="progress-bar" style="width: 6%;"></div>
-                        </div>
-                    </div>
-
+            <!-- ================================== -->
+            <!-- EXPENSES TABLE (From Week 2)       -->
+            <!-- ================================== -->
+            <section class="expenses-section">
+                <h2>Your Expenses</h2>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Amount</th>
+                                <th>Category</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Groceries</td><td>$120.50</td><td>Food</td><td>2026-01-15</td></tr>
+                            <tr><td>Bus Fare</td><td>$15.00</td><td>Transport</td><td>2026-01-16</td></tr>
+                            <tr><td>Monthly Rent</td><td>$850.00</td><td>Rent</td><td>2026-01-01</td></tr>
+                            <tr><td>Movie Tickets</td><td>$25.00</td><td>Entertainment</td><td>2026-01-12</td></tr>
+                            <tr><td>Phone Bill</td><td>$45.00</td><td>Other</td><td>2026-01-10</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
 
